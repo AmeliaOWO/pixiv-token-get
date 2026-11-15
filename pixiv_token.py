@@ -65,10 +65,11 @@ _active_proxy = None
 # 工具函数
 # ---------------------------------------------------------------------------
 def setup_console():
-    """Windows 控制台默认不是 UTF-8，避免打印日文报错时崩掉。"""
+    """输出被重定向到管道/文件时，避免遇到无法编码的字符直接崩掉。
+    注意不能强制改成 utf-8：Windows 控制台要靠原始编码走 WriteConsoleW 才能正常显示中文。"""
     for stream in (sys.stdout, sys.stderr):
         try:
-            stream.reconfigure(encoding="utf-8", errors="replace")
+            stream.reconfigure(errors="replace")
         except (AttributeError, ValueError):
             pass
 

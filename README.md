@@ -11,6 +11,19 @@
 
 ---
 
+## 下载（免安装）
+
+不想 clone 的话，直接去 [Releases](https://github.com/AmeliaOWO/pixiv-token-get/releases) 下载
+`pixiv-token-1.1.0.zip`，解压后：
+
+| 系统 | 操作 |
+| --- | --- |
+| Windows | 双击 `一键获取Token.bat` |
+| macOS | 双击 `一键获取Token.command`（首次可能要 `chmod +x`，或在「隐私与安全性」里放行） |
+| Linux | `bash run.sh` |
+
+---
+
 ## 快速开始
 
 ```bash
